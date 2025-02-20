@@ -3,7 +3,6 @@ plugins {
 	kotlin("plugin.spring") version "1.9.25"
 	id("org.springframework.boot") version "3.4.2"
 	id("io.spring.dependency-management") version "1.1.7"
-	id("io.swagger.core.v3.swagger-gradle-plugin") version "2.2.28"
 }
 
 group = "com.googleSheetsParser"
@@ -28,7 +27,8 @@ dependencies {
 	implementation("com.google.http-client:google-http-client-gson:1.42.3")
 	implementation("com.google.apis:google-api-services-sqladmin:v1-rev20230721-2.0.0")
 	implementation("com.google.apis:google-api-services-sheets:v4-rev20230808-2.0.0")
-	implementation("io.springfox:springfox-boot-starter:3.0.0")
+	implementation("org.apache.kafka:kafka-streams")//kafka
+	implementation("org.springframework.kafka:spring-kafka")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
